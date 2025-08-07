@@ -6,6 +6,7 @@
     <title>Aula Emergencial | Quando o professor falta</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -17,6 +18,7 @@
             <nav>
                 <ul>
                     <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#" id="savedLessonsLink">Aulas Salvas</a></li>
                     <li><a href="#">Matérias</a></li>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Contato</a></li>
@@ -29,6 +31,15 @@
                 <div class="hero-content">
                     <h2>Professor faltou? <span>Não perca a aula!</span></h2>
                     <p>Pesquise qualquer conteúdo e gere uma aula completa automaticamente.</p>
+                    
+                    <div class="difficulty-selector">
+                        <label for="difficultyLevel">Nível:</label>
+                        <select id="difficultyLevel">
+                            <option value="básico">Básico</option>
+                            <option value="intermediário" selected>Intermediário</option>
+                            <option value="avançado">Avançado</option>
+                        </select>
+                    </div>
                     
                     <div class="search-box">
                         <input type="text" id="searchInput" placeholder="Digite o tema da aula (ex: Teorema de Pitágoras)...">
@@ -63,15 +74,22 @@
                             <i class="fas fa-robot"></i>
                         </div>
                         <h4>2. Processamos</h4>
-                        <p>Nosso sistema cria uma aula completa</p>
+                        <p>Nosso sistema cria uma aula completa com IA</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">
                             <i class="fas fa-book-open"></i>
                         </div>
                         <h4>3. Aprenda</h4>
-                        <p>Receba slides prontos para estudo</p>
+                        <p>Receba slides prontos com gráficos e exemplos</p>
                     </div>
+                </div>
+            </section>
+
+            <section class="saved-lessons" id="savedLessonsSection">
+                <h3><i class="fas fa-bookmark"></i> Aulas Salvas</h3>
+                <div class="lessons-grid" id="savedLessonsContainer">
+                    <!-- Aulas salvas serão carregadas aqui pelo JavaScript -->
                 </div>
             </section>
         </main>
@@ -84,6 +102,7 @@
                     <!-- Slides serão inseridos aqui pelo JavaScript -->
                 </div>
                 <div class="modal-actions">
+                    <button id="saveLesson"><i class="fas fa-bookmark"></i> Salvar Aula</button>
                     <button id="downloadPdf"><i class="fas fa-file-pdf"></i> Baixar PDF</button>
                     <button id="shareLesson"><i class="fas fa-share-alt"></i> Compartilhar</button>
                 </div>
@@ -95,13 +114,13 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>AulaEmergencial</h4>
-                <p>Sua solução para quando o professor falta. Aulas geradas automaticamente para você não perder o ritmo de estudos.</p>
+                <p>Sua solução para quando o professor falta. Aulas geradas automaticamente com IA para você não perder o ritmo de estudos.</p>
             </div>
             <div class="footer-section">
                 <h4>Links Rápidos</h4>
                 <ul>
                     <li><a href="#">Matérias</a></li>
-                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Aulas Salvas</a></li>
                     <li><a href="#">Termos de uso</a></li>
                     <li><a href="#">Política de privacidade</a></li>
                 </ul>
