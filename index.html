@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Emergencial | Quando o professor falta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h1>Aula<span>Emergencial</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#">Matérias</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Professor faltou? <span>Não perca a aula!</span></h2>
+                    <p>Pesquise qualquer conteúdo e gere uma aula completa automaticamente.</p>
+                    
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Digite o tema da aula (ex: Teorema de Pitágoras)...">
+                        <button id="searchBtn"><i class="fas fa-search"></i> Gerar Aula</button>
+                    </div>
+                    
+                    <div class="quick-links">
+                        <p>Tópicos populares:</p>
+                        <a href="#">Revolução Francesa</a>
+                        <a href="#">Fotossíntese</a>
+                        <a href="#">Funções Quadráticas</a>
+                        <a href="#">Segunda Guerra Mundial</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/learning.svg" alt="Estudante aprendendo">
+                </div>
+            </section>
+
+            <section class="features">
+                <h3>Como funciona</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>1. Pesquise</h4>
+                        <p>Digite o tema que você precisa estudar</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>2. Processamos</h4>
+                        <p>Nosso sistema cria uma aula completa</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h4>3. Aprenda</h4>
+                        <p>Receba slides prontos para estudo</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="modal" id="lessonModal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3 id="modalTitle">Aula Gerada: <span id="lessonTopic"></span></h3>
+                <div class="slides-container" id="slidesContainer">
+                    <!-- Slides serão inseridos aqui pelo JavaScript -->
+                </div>
+                <div class="modal-actions">
+                    <button id="downloadPdf"><i class="fas fa-file-pdf"></i> Baixar PDF</button>
+                    <button id="shareLesson"><i class="fas fa-share-alt"></i> Compartilhar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AulaEmergencial</h4>
+                <p>Sua solução para quando o professor falta. Aulas geradas automaticamente para você não perder o ritmo de estudos.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#">Matérias</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p><i class="fas fa-envelope"></i> contato@aulaemergencial.com</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 AulaEmergencial. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
